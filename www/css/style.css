@@ -1,0 +1,130 @@
+ion-item div {
+	float: left;
+	margin-left: 10px;
+}
+
+.eventlist-name {
+	margin-top:2px;
+	
+}
+
+time.iconbig
+{
+  font-size: 1.5em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 4em;
+  height: 4em;
+  background-color: #fff;
+  margin: 0.1em auto;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+  margin-right: 10px;
+  float: left;
+}
+
+time.iconbig *
+{
+  display: block;
+  width: 100%;
+  font-size: 0.6em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.iconbig strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.2em 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+
+time.iconbig em
+{
+  position: absolute;
+  bottom: 0.2em;
+  color: #fd9f1b;
+}
+
+time.iconbig span
+{
+  width: 100%;
+  font-size: 1.3em;
+  letter-spacing: -0.05em;
+  padding-top: 1.4em;
+  color: #2f2f2f;
+}
+
+time.icon
+{
+  font-size: 1.0em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background-color: #fff;
+  margin: 0.1em auto;
+  border-radius: 0.1em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+}
+
+
+
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+
+time.icon em
+{
+  position: absolute;
+  bottom: 0.2em;
+  color: #fd9f1b;
+}
+
+time.icon span
+{
+  width: 100%;
+  font-size: 0.9em;
+  padding-top: 1.9em;
+  color: #2f2f2f;
+}
+
+
+.red {
+	color:red;
+}
+
+.angular-google-map-container{
+	height: 400px;
+}

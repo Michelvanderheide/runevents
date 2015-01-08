@@ -1,0 +1,26 @@
+<ion-view>
+	<div class="tabs-striped tabs-top tabs-background-positive tabs-light">
+		<div class="tabs">
+		  <a class="tab-item" href="#/tab/events/period/{{prevMonthYear}}">
+			{{prevMonth}}
+		  </a>
+		  <a class="tab-item active" href="#/tab/events/period/{{curMonthYear}}">
+			{{curMonthYear}}
+		  </a>	  
+		  <a class="tab-item" href="#/tab/events/period/{{nextMonthYear}}">
+			{{nextMonth}}
+		  </a>
+		</div>
+	</div>	
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="event in events | filter:query | orderBy:orderProp" type="item-text-wrap" href="#/tab/event/{{event.id}}">
+				<div event-date></div>
+					<div class="eventlist-name" style="text-overflow:ellipsis"></div>
+					<p style="text-overflow:ellipsis;padding:5px;">{{event.name}}&nbsp;|&nbsp;{{event.city}}<br>
+					{{event.afstanden}}
+					</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

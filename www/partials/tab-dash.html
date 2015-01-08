@@ -1,0 +1,112 @@
+<ion-view title="Dashboard">
+  <ion-content class="padding">
+<ul class="list">
+
+	<li class="item item-toggle">
+		Show local events
+		<label class="toggle toggle-positive">
+			<input type="checkbox" ng-model="filter.searchLocal">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<li ng-show="filter.searchLocal==true" class="item text-center">
+		Range : {{filter.radius}} km from {{filter.plaats}}
+	</li>
+	<li ng-show="filter.searchLocal==true" class="item range range-positive">
+		<i class="icon ion-arrow-shrink"></i>
+		<input ng-model="filter.radius" type="range" name="radius" min="0" model-max="max-radius">
+		<i class="icon ion-arrow-expand"></i>
+	</li> 
+	<li class="item"></li>
+	<li class="item item-toggle">
+		Show popular events
+		<label class="toggle toggle-positive">
+			<input type="checkbox" ng-model="searchPopular">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li> 
+
+	<!--li class="item text-center">Specific running distance</li-->
+	<li class="item item-toggle">
+		Distances
+		<label class="toggle toggle-positive">
+			<input type="checkbox" ng-model="filter.searchSpecificDistance">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<li>
+		<ul ng-show="filter.searchSpecificDistance==true" ng-repeat="searchDistance in searchDistances" style="display:block;float:left;width:50%">
+			<li ng-if="$index < searchDistances.length/2" class="item item-checkbox">
+				<label class="checkbox">
+					<input checklist-model="filter.searchForDistance" checklist-value="searchDistance.id" type="checkbox">
+				</label>{{searchDistance.name}}
+			</li>
+		</ul>
+		<ul ng-show="filter.searchSpecificDistance==true" ng-repeat="searchDistance in searchDistances" style="display:block;float:left;width:50%">
+			<li ng-if="$index >= searchDistances.length/2" class="item item-checkbox">
+				<label class="checkbox">
+					<input checklist-model="filter.searchForDistance" checklist-value="searchDistance.id" type="checkbox">
+				</label>{{searchDistance.name}}
+			</li>
+		</ul>
+
+	<li>
+		<!--ul ng-show="searchSpecificDistance==true" style="display:block;float:left;width:50%">
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input ng-model="searchDistance" type="checkbox">
+				</label>5 km
+			</li>
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>10 km
+			</li>
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>15 km
+			</li>
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>Ten English miles
+			</li>
+		</ul>
+		<ul ng-show="searchSpecificDistance==true" style="float:left;width:50%">
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>Half marathon
+			</li>
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>30 km
+			</li>	
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>35 km
+			</li>	
+			<li class="item item-checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+				</label>Marathon
+			</li>
+		<ul>
+	</li-->
+	
+	
+	
+
+</ul>	
+</ul>
+  </ion-content>
+</ion-view>

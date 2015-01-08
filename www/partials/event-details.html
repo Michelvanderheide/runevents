@@ -1,0 +1,60 @@
+<ion-view title="{{event.name}}">
+  <ion-content has-header="true" padding="true">
+  
+<div class="list card">
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a ng-show="event.todo" class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a ng-show="event.todo" class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" ng-show="event.subscription_url" target="_blank" href="{{event.subscription_url}}">
+      <i class="icon ion-edit"></i>
+      Inschrijving
+    </a>	
+    <a class="tab-item" ng-show="event.website_url" target="_blank" href="{{event.website_url}}">
+      <i class="icon ion-share"></i>
+      Website
+    </a>
+  </div>
+  <div class="item item-avatar">
+    <div event-date-big></div>
+	<div class="content">
+		<h2>{{event.name}}</h2>
+		<p>{{event.address}} {{event.city}}</p>
+		<p>{{event.afstanden}}</p>
+		<p>{{event.program}}</p>
+	</div>
+  </div>
+
+  <div class="item item-body">
+  
+  
+    <p>
+		
+
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+</div>	
+		<ui-gmap-google-map class="events-map" ng-show="{{event.latitude}}" draggable="true" center="event.gmap.center" zoom="event.gmap.zoom">
+			<ui-gmap-marker idkey="event.id" coords="event.gmap.dynamicMarker.coords">
+				<ui-gmap-window options="windowOptions" >
+					<div>{{event.title}}</div>
+				</ui-gmap-window>
+			</ui-gmap-marker>
+		</ui-gmap-google-map>
+  </ion-content>
+</ion-view>
+
+
+
+
+                

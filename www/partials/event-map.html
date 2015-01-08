@@ -1,0 +1,32 @@
+<ion-view title="Running events">
+	<div class="tabs-striped tabs-top tabs-background-positive tabs-light">
+		<div class="tabs-top">
+		  <a class="tab-item" href="#/tab/map/period/{{prevMonthYear}}">
+			{{prevMonth}}
+		  </a>
+		  <a class="tab-item active" href="#/tab/map/period/{{curMonthYear}}">
+			{{curMonthYear}}
+		  </a>	  
+		  <a class="tab-item" href="#/tab/map/period/{{nextMonthYear}}">
+			{{nextMonth}}
+		  </a>
+		</div>
+	</div>	
+	<ion-content class="has-tabs-top">
+		
+	
+		<ui-gmap-google-map draggable="true" center="gmap.center" zoom="gmap.zoom">
+			<ui-gmap-markers models="gmap.dynamicMarkers" coords="'coords'" fit="'true'" icon="'icon'" click="'onClick'">
+				<ui-gmap-windows ng-cloak>
+					<p ng-non-bindable><a href="#/tab/map/{{id}}">{{ title }}</a></p>
+				</ui-gmap-windows>
+			</ui-gmap-markers>
+		</ui-gmap-google-map>	
+		
+  </ion-content>
+</ion-view>
+
+
+
+
+                
